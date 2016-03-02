@@ -1,0 +1,30 @@
+From d12eaf637001a8caa9183590c35a1941d9990542 Mon Sep 17 00:00:00 2001
+From: Alexander Smirnov <asmirnov@ilbers.de>
+Date: Thu, 25 Feb 2016 19:52:27 +0300
+Subject: [PATCH] egl: fix platform support compilation
+
+Fix the compilation of platform support EGL part.
+
+Signed-off-by: Alexander Smirnov <asmirnov@ilbers.de>
+---
+ src/platformsupport/eglconvenience/qeglpbuffer_p.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/platformsupport/eglconvenience/qeglpbuffer_p.h b/src/platformsupport/eglconvenience/qeglpbuffer_p.h
+index 81fdab8..b38217d 100644
+--- a/src/platformsupport/eglconvenience/qeglpbuffer_p.h
++++ b/src/platformsupport/eglconvenience/qeglpbuffer_p.h
+@@ -45,9 +45,9 @@
+ // We mean it.
+ //
+ 
++#include <QtPlatformSupport/private/qeglplatformcontext_p.h>
+ #include <EGL/egl.h>
+ #include <qpa/qplatformoffscreensurface.h>
+-#include <QtPlatformSupport/private/qeglplatformcontext_p.h>
+ 
+ QT_BEGIN_NAMESPACE
+ 
+-- 
+1.9.3
+
